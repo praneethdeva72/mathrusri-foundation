@@ -5,7 +5,7 @@ body {
   line-height: 1.6;
 }
 
-/* ✅ Navigation */
+/*  Navigation */
 .main-nav {
   background: linear-gradient(135deg, #1e293b, #0f172a);
 }
@@ -17,7 +17,7 @@ body {
   color: #6366f1;
 }
 
-/* ✅ Hero */
+/*  Hero */
 .hero {
   background: #1e293b;
 }
@@ -41,7 +41,7 @@ body {
   font-weight: 700;
 }
 
-/* ✅ About Section */
+/*  About Section */
 .about-section {
   background: #0f172a;
 }
@@ -52,7 +52,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* ✅ Video Section */
+/*  Video Section */
 .video-section {
   background: #1e293b;
 }
@@ -63,7 +63,7 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
-/* ✅ Cards */
+/*  Cards */
 .card-custom {
   background: #1e293b;
   border: none;
@@ -76,7 +76,7 @@ body {
   transform: translateY(-10px);
 }
 
-/* ✅ Footer */
+/*  Footer */
 .footer-section {
   background: #1e293b;
   color: #94a3b8;
@@ -88,3 +88,4 @@ body {
 .footer-link:hover {
   text-decoration: underline;
 }
+
