@@ -91,6 +91,12 @@ body {
   transform: scale(1.03);
   opacity: 0.95;
   color: #fff;
+
+  .construction-icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  color: #facc15; /* A bright, visible color */
+}
   
 /*  Footer */
 
@@ -110,6 +116,7 @@ body {
   text-decoration: underline;
   color: #3b82f6; /* Subtle color change on hover */
 }
+
 
 
 
