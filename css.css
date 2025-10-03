@@ -1,7 +1,7 @@
 body {
   background: #0f172a;
   color: #f1f5f9;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
 }
 
@@ -88,4 +88,5 @@ body {
 .footer-link:hover {
   text-decoration: underline;
 }
+
 
