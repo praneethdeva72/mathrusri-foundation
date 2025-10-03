@@ -76,6 +76,22 @@ body {
   transform: translateY(-10px);
 }
 
+.btn {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px; 
+  border: none;
+  border-radius: 8px; 
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+  color: #fff;
+  
 /*  Footer */
 .footer-section {
   background: #1e293b;
@@ -88,5 +104,6 @@ body {
 .footer-link:hover {
   text-decoration: underline;
 }
+
 
 
