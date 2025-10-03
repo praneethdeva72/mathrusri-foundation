@@ -93,9 +93,14 @@ body {
   color: #fff;
   
 /*  Footer */
+
 .footer-section {
   background: #1e293b;
   color: #94a3b8;
+  /* Add a subtle gradient line at the top */
+  border-top: 2px solid transparent; 
+  border-image: linear-gradient(to right, #6366f1, #3b82f6);
+  border-image-slice: 1;
 }
 .footer-link {
   color: #6366f1;
@@ -103,6 +108,7 @@ body {
 }
 .footer-link:hover {
   text-decoration: underline;
+  color: #3b82f6; /* Subtle color change on hover */
 }
 
 
