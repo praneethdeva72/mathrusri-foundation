@@ -5,161 +5,27 @@
   <title>Contact Us | Mathrusri Foundation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Mathrusri Foundation for support, partnerships, or volunteering.">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css.css">
 
-  <style>
-    .cf-label {
-      display: block;
-      color: #94a3b8;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.9px;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-    .cf-input, .cf-textarea, .cf-select {
-      display: block;
-      width: 100%;
-      background: #0b1120;
-      border: 1px solid rgba(255,255,255,0.1);
-      color: #f1f5f9;
-      border-radius: 10px;
-      padding: 0.72rem 1rem;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      transition: border-color 0.25s, box-shadow 0.25s;
-      outline: none;
-      appearance: none;
-    }
-    .cf-input::placeholder, .cf-textarea::placeholder { color: #3d4f6b; }
-    .cf-input:focus, .cf-textarea:focus, .cf-select:focus {
-      border-color: rgba(99,102,241,0.65);
-      box-shadow: 0 0 0 3px rgba(99,102,241,0.13);
-      background: #0d1628;
-    }
-    .cf-input.error, .cf-textarea.error {
-      border-color: rgba(239,68,68,0.6);
-      box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
-    }
-    .cf-textarea { resize: vertical; min-height: 130px; }
-    .cf-select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2394a3b8' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.9rem center;
-      background-size: 14px;
-      padding-right: 2.4rem;
-      cursor: pointer;
-    }
-    .cf-select option { background: #1e2a42; color: #f1f5f9; }
-    .field-error {
-      color: #f87171;
-      font-size: 0.78rem;
-      margin-top: 0.3rem;
-      display: none;
-    }
-    .cf-submit {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      width: 100%;
-      padding: 0.8rem 1rem;
-      background: linear-gradient(135deg, #6366f1, #3b82f6);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
-      box-shadow: 0 4px 18px rgba(99,102,241,0.4);
-    }
-    .cf-submit:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(99,102,241,0.5);
-    }
-    .cf-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
-    .spinner {
-      width: 18px; height: 18px;
-      border: 2.5px solid rgba(255,255,255,0.35);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-      display: none;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .cf-alert {
-      display: none;
-      padding: 0.9rem 1.1rem;
-      border-radius: 10px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      align-items: flex-start;
-      gap: 0.6rem;
-    }
-    .cf-alert.success {
-      background: rgba(16,185,129,0.1);
-      border: 1px solid rgba(16,185,129,0.3);
-      color: #34d399;
-    }
-    .cf-alert.error {
-      background: rgba(239,68,68,0.08);
-      border: 1px solid rgba(239,68,68,0.25);
-      color: #f87171;
-    }
-    .contact-info-item {
-      display: flex; align-items: flex-start; gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .contact-info-item:last-child { border-bottom: none; }
-    .contact-icon {
-      width: 44px; height: 44px; min-width: 44px;
-      background: rgba(99,102,241,0.12);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      color: #6366f1; font-size: 1rem;
-    }
-    .contact-detail-label {
-      color: #94a3b8; font-size: 0.72rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 0.2rem;
-    }
-    .contact-detail-value { color: #f1f5f9; font-size: 0.93rem; font-weight: 500; }
-    .setup-notice {
-      background: rgba(245,158,11,0.08);
-      border: 1px solid rgba(245,158,11,0.25);
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      font-size: 0.8rem;
-      color: #fbbf24;
-      margin-bottom: 1.25rem;
-      display: flex; gap: 0.5rem; align-items: flex-start;
-    }
-    .setup-notice code {
-      background: rgba(245,158,11,0.15);
-      padding: 1px 5px; border-radius: 4px;
-      font-size: 0.78rem;
-    }
-  </style>
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-lg sticky-top main-nav">
   <div class="container">
-    <a class="navbar-brand text-light fw-bold d-flex align-items-center gap-2" href="index.html">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
       <img src="pictures/deva.webp" alt="Logo" width="38" height="38"> Mathrusri Foundation
     </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+    <button class="navbar-toggler custom-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav gap-1 align-items-lg-center">
@@ -241,7 +107,7 @@
     <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
       <div class="card-custom p-4 p-md-5">
         <h4 class="gradient-text mb-1" style="font-size:1.2rem;">Send a Message</h4>
-        <p style="color:#64748b;font-size:0.85rem;margin-bottom:1.5rem;">We typically respond within 1–2 business days.</p>
+        <p style="color:var(--text-soft);font-size:0.85rem;margin-bottom:1.5rem;">We typically respond within 1–2 business days.</p>
 
 
         <form id="contactForm" action="https://formspree.io/f/meevawrp" method="POST" novalidate>
@@ -251,7 +117,7 @@
 
           <div class="row g-3 mb-3">
             <div class="col-sm-6">
-              <label class="cf-label" for="cf-name">Full Name <span style="color:#f87171;">*</span></label>
+              <label class="cf-label" for="cf-name">Full Name <span style="color:var(--danger);">*</span></label>
               <input class="cf-input" type="text" id="cf-name" name="name" placeholder="e.g. Ravi Kumar" autocomplete="name">
               <div class="field-error" id="err-name">Please enter your name.</div>
             </div>
@@ -262,7 +128,7 @@
           </div>
 
           <div class="mb-3">
-            <label class="cf-label" for="cf-email">Email Address <span style="color:#f87171;">*</span></label>
+            <label class="cf-label" for="cf-email">Email Address <span style="color:var(--danger);">*</span></label>
             <input class="cf-input" type="email" id="cf-email" name="email" placeholder="you@example.com" autocomplete="email">
             <div class="field-error" id="err-email">Please enter a valid email address.</div>
           </div>
@@ -281,7 +147,7 @@
           </div>
 
           <div class="mb-4">
-            <label class="cf-label" for="cf-message">Message <span style="color:#f87171;">*</span></label>
+            <label class="cf-label" for="cf-message">Message <span style="color:var(--danger);">*</span></label>
             <textarea class="cf-textarea" id="cf-message" name="message" placeholder="Tell us how we can help, or how you'd like to get involved…"></textarea>
             <div class="field-error" id="err-message">Please write a short message (min. 10 characters).</div>
           </div>
@@ -319,7 +185,7 @@
   </div>
 </footer>
 
-<button id="scrollTop" aria-label="Scroll to top">↑</button>
+<button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
